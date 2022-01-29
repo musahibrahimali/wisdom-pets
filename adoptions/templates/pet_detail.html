@@ -1,0 +1,23 @@
+
+{% extends 'base.html' %}
+
+{% block title %}
+    Pet - Wisdom Pet Medicine built with django || Lynda.com
+{% endblock %}
+
+{% block main-content %}
+    <div class="wrapper">
+        <div class="petname">
+            <div>
+                <h3>{{ pet.name|capfirst  }}</h3>
+            </div>
+            <p>Species : {{ pet.species }} </p>
+            {% if pet.breed %}
+                <p>Breed : {{ pet.breed }} </p>
+            {% endif %}
+            <p> Age : {{ pet.sex }} </p>
+            <p> Age : {{ pet.age }} </p>
+            <p class="hidden"> Description : {{ pet.description }} </p>
+            </div>
+    </div>
+{% endblock %}
